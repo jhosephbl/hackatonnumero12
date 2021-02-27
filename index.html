@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackaton 12</title>
+    <link rel="stylesheet" href="./styles.css">
+    
+</head>
+<body>
+
+    
+    <form name="Calculadora" class="contenedor-general">
+        <table class="numeros-contenedor">
+            <tr class="numeros-lista">
+                <td class="numeros-td"><input class="numeros-elemento" type="button" value="1" onclick="ingresarnumero(this.value)"></td>
+                <td class="numeros-td"><input class="numeros-elemento" type="button" value="2" onclick="ingresarnumero(this.value)"></td>
+                <td class="numeros-td"><input class="numeros-elemento" type="button" value="3" onclick="ingresarnumero(this.value)"></td>
+                <td class="numeros-td"><input class="matematicas-operacion" type="button" value="+" onclick="ingresaroperacion(this.value)"></td>
+                <td class="numeros-td"><input class="matematicas-operacion" type="button" value="-" onclick="ingresaroperacion(this.value)"></td>
+            </tr>
+
+            <tr class="numero-lista">
+                <td class="numeros-td"><input class="numeros-elemento" type="button" value="4" onclick="ingresarnumero(this.value)"></td>
+                <td class="numeros-td"><input class="numeros-elemento" type="button" value="5" onclick="ingresarnumero(this.value)"></td>
+                <td class="numeros-td"><input class="numeros-elemento" type="button" value="6" onclick="ingresarnumero(this.value)"></td>
+                <td class="numeros-td"><input class="matematicas-operacion" type="button" value="*" onclick="ingresaroperacion(this.value)"></td>
+                <td class="numeros-td"><input class="matematicas-operacion" type="button" value="/" onclick="ingresaroperacion(this.value)"></td>
+            </tr>
+
+            <tr class="numero-lista">
+                <td class="numeros-td"><input class="numeros-elemento" type="button" value="7" onclick="ingresarnumero(this.value)"></td>
+                <td class="numeros-td"><input class="numeros-elemento" type="button" value="8" onclick="ingresarnumero(this.value)"></td>
+                <td class="numeros-td"><input class="numeros-elemento" type="button" value="9" onclick="ingresarnumero(this.value)"></td>
+                <td class="numeros-td"><input class="matematicas-operacion" type="button" value="=" onclick="resultado()"></td>
+
+                <td class="numeros-td"><input class="matematicas-operacion" type="button" value="^" onclick="ingresaroperacion('**')"></td>
+            </tr>
+            <tr class="numero-lista">
+                <td class="numeros-td"><input class="numeros-elemento" type="button" value="0" onclick="ingresarnumero(this.value)"></td>
+
+                <td class="numeros-td"><input class="numeros-elemento" type="button" value="." onclick="ingresarnumero(this.value)"></td>
+                <td class="numeros-td"><input class="numeros-elemento" type="button" value="C" onclick="limpiar()"></td>
+
+            </tr>
+
+            <tr><td colspan="5"><input type="text" name="txtboxnros" class="resultado" value="0" disabled></td></tr>
+
+            
+        
+            
+        </table>
+
+    </form>
+
+    
+	<div class="contenedor-tareas">
+		<h3>Mi lista de hackatones pendientes</h3>
+		<div class="contenedor-tareas-items">
+			
+			<input type="text" id="list">
+            <br/>
+			<button class="contenedor-tareas-boton" onclick="addList()">Agregar a lista</button>
+		</div>
+		<div>
+            <h3>Mi lista de pendientes</h3>
+            <ul id="result"></ul>
+		</div>
+	</div>
+    
+
+    <script src="./script.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
